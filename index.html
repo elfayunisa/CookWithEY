@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CookWithEY — Resep Masakan Estetik & Rumahan</title>
+    <!-- Google Fonts: Playfair Display (Serif Estetik) & Plus Jakarta Sans (Clean) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Remix Icon untuk Ikon Cantik -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-content">
+        <a href="#" class="logo">
+          <span class="logo-icon"><i class="ri-restaurant-2-line"></i></span>
+          CookWith<span class="highlight">EY</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#home" class="active">Home</a>
+          <a href="#resep-terbaru">Kumpulan Resep</a>
+          <a href="#kategori">Kategori</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="btnOpenUpload" class="btn-primary">
+            <i class="ri-add-circle-line"></i> Upload Resep
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION (Modifikasi Estetik dari Referensi) -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <span class="badge">RECIPE OF THE DAY ✨</span>
+          <h1>
+            Cita Rasa <br /><span class="serif-italic">Istimewa</span>
+            dari Dapur Rumah
+          </h1>
+          <p>
+            Kumpulan kurasi resep pilihan dengan cita rasa khas Nusantara hingga
+            hidangan modern dirancang praktis dan teruji untuk menginspirasi
+            meja makan Anda setiap hari. <em>Curated by EY.</em>
+          </p>
+          <div class="hero-buttons">
+            <a href="#resep-terbaru" class="btn-primary"
+              >Jelajahi Resep <i class="ri-arrow-down-line"></i
+            ></a>
+            <button id="btnHeroUpload" class="btn-secondary">
+              + Bagikan Resepmu
+            </button>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="blob-bg"></div>
+          <img
+            src="dashboard.jpg"
+            alt="Hidangan Spesial CookWithEY"
+            class="hero-img"
+          />
+          <div class="floating-card">
+            <i class="ri-heart-3-fill"></i>
+            <div>
+              <strong>100% Homemade</strong>
+              <span>Curated by EY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTER KATEGORI -->
+    <section id="kategori" class="category-section">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Resep by Kategori</h2>
+          <p>Pilih kategori favoritmu atau cari menu spesifik di bawah ini</p>
+        </div>
+
+        <div class="search-box">
+          <i class="ri-search-line"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari resep (misal: Nasi Goreng, Dessert, Tumis)..."
+          />
+        </div>
+
+        <div class="category-pills" id="categoryFilter">
+          <button class="pill active" data-category="Semua">Semua</button>
+          <button class="pill" data-category="Tumis">Tumis</button>
+          <button class="pill" data-category="Sop & Kuah">Sop & Kuah</button>
+          <button class="pill" data-category="Dessert & Cake">
+            Dessert & Cake
+          </button>
+          <button class="pill" data-category="Cemilan">Cemilan</button>
+          <button class="pill" data-category="Minuman">Minuman</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID RESEP MINGGU INI -->
+    <section id="resep-terbaru" class="recipes-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Resep Pilihan Minggu Ini</h2>
+          <span id="recipeCount" class="count-badge">Menampilkan 6 resep</span>
+        </div>
+
+        <div class="recipe-grid" id="recipeGrid">
+          <!-- Kartu resep akan dirender otomatis lewat script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (Identitas Pembuat) -->
+    <section id="about" class="about-section">
+      <div class="container about-card">
+        <div class="about-content">
+          <span class="badge">ABOUT THE ARCHIVE</span>
+          <h2>Tentang CookWithEY</h2>
+          <p>
+            <strong>CookWithEY</strong> adalah arsip kuliner digital yang
+            dikurasi secara khusus untuk mendokumentasikan ragam resep rumahan
+            teruji—mulai dari sajian harian autentik hingga kreasi hidangan
+            penutup modern. Dirancang dengan panduan langkah yang terstruktur
+            dan takaran presisi agar siapa pun dapat menyajikan hidangan
+            istimewa dari dapur sendiri. <em>Curated by EY.</em>
+          </p>
+          <div class="about-tags">
+            <span><i class="ri-award-line"></i> Resep Terkurasi</span>
+            <span><i class="ri-scales-3-line"></i> Takaran Presisi</span>
+            <span><i class="ri-quill-pen-line"></i> Curated by EY</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <h3>CookWith<span>EY</span></h3>
+          <p>Membawa kehangatan masakan rumahan ke layar digitalmu.</p>
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"
+            ><i class="ri-instagram-line"></i
+          ></a>
+          <a href="#" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+          <a href="#" aria-label="GitHub"><i class="ri-github-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 CookWithEY. Crafted with <i class="ri-heart-fill"></i> by
+          <strong>Elfa Yunisa</strong>.
+        </p>
+      </div>
+    </footer>
+
+    <!-- MODAL UPLOAD RESEP BARU -->
+    <div id="uploadModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Upload Resep Baru ✨</h3>
+          <button class="close-modal" id="closeUploadModal">&times;</button>
+        </div>
+        <form id="recipeForm">
+          <div class="form-group">
+            <label>Judul Resep *</label>
+            <input
+              type="text"
+              id="title"
+              required
+              placeholder="Contoh: Creamy Matcha Latte / Nasi Goreng Spesial"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Kategori *</label>
+              <select id="category" required>
+                <option value="Tumis">Tumis</option>
+                <option value="Sop & Kuah">Sop & Kuah</option>
+                <option value="Dessert & Cake">Dessert & Cake</option>
+                <option value="Cemilan">Cemilan</option>
+                <option value="Minuman">Minuman</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Waktu Masak</label>
+              <input
+                type="text"
+                id="cookTime"
+                placeholder="Contoh: 20 Menit"
+                value="25 Menit"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label
+              >Upload Foto Makanan (dari Galeri/Laptop) atau Link URL</label
+            >
+            <input
+              type="file"
+              id="imageFile"
+              accept="image/*"
+              class="file-input"
+            />
+            <input
+              type="url"
+              id="imageUrl"
+              placeholder="Atau tempel link gambar (opsional)..."
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Bahan-bahan (Pisahkan dengan baris baru) *</label>
+            <textarea
+              id="ingredients"
+              rows="4"
+              required
+              placeholder="- 2 piring nasi putih&#10;- 2 butir telur&#10;- 3 siung bawang putih"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Cara Membuat (Pisahkan dengan baris baru) *</label>
+            <textarea
+              id="steps"
+              rows="4"
+              required
+              placeholder="1. Tumis bawang putih hingga harum.&#10;2. Masukkan telur, orak-arik.&#10;3. Masukkan nasi dan bumbu, aduk rata."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary full-width">
+            Simpan & Publikasikan Resep
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- MODAL DETAIL RESEP -->
+    <div id="detailModal" class="modal">
+      <div class="modal-content detail-modal-content">
+        <button class="close-modal floating-close" id="closeDetailModal">
+          &times;
+        </button>
+        <div id="detailBody">
+          <!-- Isi detail resep akan muncul di sini -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
